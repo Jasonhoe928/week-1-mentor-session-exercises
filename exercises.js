@@ -6,6 +6,32 @@
  * ie: "cat" => "tac"
  */
 
+//function should accept string
+//function should reverse order of string
+    //split
+    //reverse
+    //join
+//function should return string
+
+//function(str)
+    //string variable = str.split('')
+    //array variable = string variable.reverse()
+    //reverse array variable = array variable.join('')
+//return reverse array variable
+
+var firstReverse = function(str) {
+    if(typeof str === typeof '') {
+        var stringSplit = str.split('');
+        var stringReverse = stringSplit.reverse();
+        var stringJoin = stringReverse.join('')
+        return stringJoin;
+    } else {
+        return null;
+    }
+
+}
+
+
  /** Function: alphaOrder
  * The function will take the str parameter being passed in and
  * return the string in alphabetical order
@@ -14,6 +40,28 @@
  * ie: "cake" => "acek"
  */
 
+//function should accept string
+//function should sort string alphabetically
+//function should return sorted string
+
+//function()
+    //string split
+    //array sort
+    //array join
+
+var alphaOrder = function(str) {
+  
+    if(typeof str === typeof '') {
+          var stringSplit = str.split('');
+        var stringSort = stringSplit.sort();
+        var arrayJoin = stringSort.join('');
+        return arrayJoin;
+    } else {
+        return null;
+    }
+}
+
+
  /** Function: vowelCount
  * The function will take the str parameter being passed in and
  * return the number of vowels in the string
@@ -21,6 +69,51 @@
  * @return {number} count of vowels
  * ie: "oreo" => 3
  */
+
+//function should accept a string
+//function should check each character in string
+//function should match if each character is a vowel
+//function should increment a variable upward if each char is a vowel
+//function should return vowel variable in string
+
+//function()
+    //vowel variable counter
+    //for loop iterating over string
+        //if(regex vowels)
+            //incriment vowel variable counter
+        //else do nothing continue for loop
+//return number of vowels
+
+var vowelCount = function(str) {
+    var vowelCounter = 0;
+    if(typeof str === 'string') {
+        for (var i = 0; i < str.length; i++) {
+            if(str[i].match(/[aeiou]/gi)) {
+                vowelCounter+=1;
+            }
+        }
+        return vowelCounter;
+    } else {
+        return null;
+    }
+}
+
+// var vowelCount = function(str) {
+//     var vowelCounter = 0;
+//     for(i = 0; i < str.length; i++) {
+//         var isVowelCheck = (str[i].match(/[aeiou]/gi);
+//         var isVowel = isVowelCheck.toString();
+//         if(isVowel === true) {
+//             vowelCounter++;
+//         } else {
+
+//         }
+//     }
+// return vowelCounter;
+// }
+
+
+
 
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
@@ -56,9 +149,9 @@
  */
 
 module.exports = {
-    firstReverse: null,
-    alphaOrder: null,
-    vowelCount: null,
+    firstReverse: firstReverse,
+    alphaOrder: alphaOrder,
+    vowelCount: vowelCount,
     timeConvert: null,
     repeatString: null
 }
